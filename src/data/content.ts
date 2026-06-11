@@ -169,8 +169,7 @@ const content: SiteContent = {
         "Tailwind CSS",
         "Shadcn/UI"
       ],
-      github: "#",
-      url: "#",
+      github: "https://github.com/felipesobrinho/InventarioIEC",
     },
 
     {
@@ -185,8 +184,6 @@ const content: SiteContent = {
         "Clerk",
         "Tailwind CSS"
       ],
-      github: "#",
-      url: "#",
     },
       {
         title: "Avante Vedações",
@@ -201,8 +198,6 @@ const content: SiteContent = {
         description:
           "Criação de um CRM Personalizado com gestão de clientes, histórico de transações, controle financeiro, auditorias de vendas e automação de processos internos",
         technologies: ["Next.js", "TypeScript", "Prisma", "Supabase", "Zustand", "Tailwind"],
-        url: "#",
-        github: "#",
       },
       {
         title: "CardAppio - Cardápio Digital",
