@@ -158,6 +158,37 @@ const content: SiteContent = {
     heading: "Projetos",
     items: [
       {
+      title: "Gestão Inventário TI",
+      description:
+        "Sistema web full-stack para gestão completa do parque tecnológico institucional. Permite cadastrar, visualizar, alocar, movimentar e auditar ativos de TI, mantendo histórico completo e rastreabilidade dos equipamentos.",
+      technologies: [
+        "Next.js",
+        "TypeScript",
+        "Prisma",
+        "PostgreSQL",
+        "Tailwind CSS",
+        "Shadcn/UI"
+      ],
+      github: "#",
+      url: "#",
+    },
+
+    {
+      title: "Sistema de Reservas de Laboratórios (IEC)",
+      description:
+        "Plataforma para gerenciamento de reservas de laboratórios acadêmicos com fluxo de aprovação, controle de disponibilidade, auditoria de reservas, notificações e gestão de usuários por perfil.",
+      technologies: [
+        "Next.js",
+        "TypeScript",
+        "Prisma",
+        "PostgreSQL",
+        "Clerk",
+        "Tailwind CSS"
+      ],
+      github: "#",
+      url: "#",
+    },
+      {
         title: "Avante Vedações",
         description:
           "Sistema de gestão ERP para empresa de peças de vedações hidráulicas e pneumáticas de alta performance, com módulos de estoque, vendas e financeiro",
@@ -165,21 +196,13 @@ const content: SiteContent = {
         url: "https://avante-beta.vercel.app/",
         github: "https://github.com/felipesobrinho/avante",
       },
-            {
-        title: "ONG Rumo Certo",
-        description:
-          "Uma plataforma de gerenciamento para a ONG Rumo Certo, que presta apoio a pessoas de comunidade com gerenciamento de doações, voluntários, eventos e oficinas.",
-        technologies: ["Next.js", "Python", "Flask", "PostgreSQL"],
-        url: "https://rumo-certo.vercel.app/home",
-        github: "https://github.com/felipesobrinho/pmv-ads-2024-2-e5-proj-empext-t3-RumoCerto",
-      },
       {
-        title: "MovieFlix - Catálogo de Filmes",
+        title: "Mundo Kids CRM",
         description:
-          "Projeto pessoal de uma plataforma de catálogo de filmes, com funcionalidades de busca, filtragem e detalhamento de filmes. Utilizado a API do TMDB para obter os dados dos filmes, e com uma interface moderna e responsiva.",
-        technologies: ["Next.js", "TypeScript", "Tailwind CSS", "Framer Motion"],
-        github: "https://github.com/felipesobrinho/movieflix",
-        url: "https://movie-flix3.netlify.app/",
+          "Criação de um CRM Personalizado com gestão de clientes, histórico de transações, controle financeiro, auditorias de vendas e automação de processos internos",
+        technologies: ["Next.js", "TypeScript", "Prisma", "Supabase", "Zustand", "Tailwind"],
+        url: "#",
+        github: "#",
       },
       {
         title: "CardAppio - Cardápio Digital",
