@@ -117,7 +117,7 @@ const content: SiteContent = {
         period: "2025 — Presente",
         description:
           "Desenvolvimento e manutenção de sistemas web Fullstack, com foco em novos componentes de interface, refatoração de código legado para escalabilidade e performance, e otimização de consultas a banco de dados.",
-        technologies: ["Vue.js", "Java", "Spring Boot", "PostgreSQL"],
+        technologies: ["PHP", "JavaScript", "Python", "PostgreSQL", "MySQL"],
       },
       {
         role: "Analista de TI",
