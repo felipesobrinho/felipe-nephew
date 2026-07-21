@@ -112,6 +112,14 @@ const content: SiteContent = {
     heading: "Experiência",
     items: [
       {
+        role: "Estagiário de Desenvolvimento Full Stack",
+        company: "4MTI",
+        period: "2025 — Presente",
+        description:
+          "Desenvolvimento e manutenção de sistemas web Fullstack, com foco em novos componentes de interface, refatoração de código legado para escalabilidade e performance, e otimização de consultas a banco de dados.",
+        technologies: ["Vue.js", "Java", "Spring Boot", "PostgreSQL"],
+      },
+      {
         role: "Analista de TI",
         company: "PUC Minas",
         companyUrl: "https://www.pucminas.br",
