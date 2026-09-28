@@ -1,10 +1,7 @@
 import { motion } from "framer-motion";
 import content from "@/data/content";
-
-const sectionVariants = {
-  hidden: { opacity: 0, y: 40 },
-  visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" as const } },
-};
+import { sectionVariants, sectionViewport } from "@/lib/motion";
+import SectionHeading from "./SectionHeading";
 
 const EducationSection = () => {
   return (
@@ -13,20 +10,16 @@ const EducationSection = () => {
       variants={sectionVariants}
       initial="hidden"
       whileInView="visible"
-      viewport={{ once: true, margin: "-100px" }}
+      viewport={sectionViewport}
       className="py-24 px-6"
     >
       <div className="max-w-4xl mx-auto">
-        <h2 className="flex items-center gap-3 text-2xl font-semibold text-foreground mb-12">
-          <span className="font-mono text-primary text-lg">03.</span>
-          {content.education.heading}
-          <span className="flex-1 h-px bg-border ml-4" />
-        </h2>
+        <SectionHeading number="05" title={content.education.heading} />
 
         <div className="space-y-12">
           {content.education.items.map((edu, i) => (
             <motion.div
-              key={i}
+              key={`${edu.degree}-${edu.institution}`}
               initial={{ opacity: 0, x: -20 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ delay: i * 0.1, duration: 0.5 }}

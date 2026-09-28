@@ -6,12 +6,13 @@ Um portfolio pessoal minimalista e moderno, construído como uma single-page app
 
 O site apresenta as seguintes seções:
 
-- **Hero** — Apresentação inicial com nome, título e chamada para ação
-- **Sobre mim** — Breve bio e tecnologias dominadas
-- **Experiência** — Timeline de experiências profissionais
+- **Hero** — Posicionamento, indicadores e chamadas para ação
+- **Sobre mim** — Bio e competências agrupadas por área
+- **Arquitetura e engenharia** — Princípios aplicados e onde foram aplicados
+- **Experiência** — Timeline com resultados por posição
+- **Projetos** — Estudos de caso com decisões de arquitetura e demais projetos
 - **Educação** — Formação acadêmica e especializações
-- **Projetos** — Cards com projetos em destaque, links e tecnologias
-- **Contato** — Seção com convite para contato e link direto para e-mail
+- **Contato** — Convite para contato e link direto para e-mail
 
 Todo o conteúdo é gerenciado a partir de um único arquivo de dados (`src/data/content.ts`), funcionando como um CMS headless — basta editar os dados e o layout se adapta automaticamente.
 
@@ -33,14 +34,19 @@ Todo o conteúdo é gerenciado a partir de um único arquivo de dados (`src/data
 ```
 src/
 ├── data/
-│   └── content.ts        # Dados centralizados (CMS-like)
+│   ├── content.ts        # Dados centralizados e tipados (CMS-like)
+│   └── content.test.ts   # Testes de integridade do conteúdo
+├── lib/
+│   └── motion.ts         # Variantes de animação compartilhadas
 ├── components/
 │   ├── Navbar.tsx
 │   ├── HeroSection.tsx
 │   ├── AboutSection.tsx
+│   ├── ArchitectureSection.tsx
 │   ├── ExperienceSection.tsx
-│   ├── EducationSection.tsx
 │   ├── ProjectsSection.tsx
+│   ├── EducationSection.tsx
+│   ├── SectionHeading.tsx
 │   ├── ContactSection.tsx
 │   └── Footer.tsx
 └── pages/
@@ -50,8 +56,10 @@ src/
 ## 🚀 Como rodar
 
 ```sh
-git clone <YOUR_GIT_URL>
-cd <YOUR_PROJECT_NAME>
+git clone https://github.com/felipesobrinho/felipe-nephew.git
+cd felipe-nephew
 npm i
-npm run dev
+npm run dev      # desenvolvimento
+npm test         # testes
+npm run build    # build de produção
 ```

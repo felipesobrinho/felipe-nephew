@@ -1,10 +1,7 @@
 import { motion } from "framer-motion";
 import content from "@/data/content";
-
-const sectionVariants = {
-  hidden: { opacity: 0, y: 40 },
-  visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" as const } },
-};
+import { sectionVariants, sectionViewport } from "@/lib/motion";
+import SectionHeading from "./SectionHeading";
 
 const ExperienceSection = () => {
   return (
@@ -13,20 +10,16 @@ const ExperienceSection = () => {
       variants={sectionVariants}
       initial="hidden"
       whileInView="visible"
-      viewport={{ once: true, margin: "-100px" }}
+      viewport={sectionViewport}
       className="py-24 px-6"
     >
       <div className="max-w-4xl mx-auto">
-        <h2 className="flex items-center gap-3 text-2xl font-semibold text-foreground mb-12">
-          <span className="font-mono text-primary text-lg">02.</span>
-          {content.experience.heading}
-          <span className="flex-1 h-px bg-border ml-4" />
-        </h2>
+        <SectionHeading number="03" title={content.experience.heading} />
 
-        <div className="space-y-12">
+        <div className="space-y-14">
           {content.experience.items.map((exp, i) => (
             <motion.div
-              key={i}
+              key={`${exp.company}-${exp.period}`}
               initial={{ opacity: 0, x: -20 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ delay: i * 0.1, duration: 0.5 }}
@@ -50,8 +43,18 @@ const ExperienceSection = () => {
                   <span className="text-primary">@ {exp.company}</span>
                 )}
               </h3>
-              <p className="text-muted-foreground mt-2 leading-relaxed">{exp.description}</p>
-              <div className="flex flex-wrap gap-2 mt-3">
+              <p className="text-muted-foreground mt-2 leading-relaxed">{exp.summary}</p>
+              <ul className="mt-4 space-y-2">
+                {exp.highlights.map((item) => (
+                  <li
+                    key={item}
+                    className="text-sm text-muted-foreground leading-relaxed pl-5 relative before:content-['▹'] before:text-primary before:absolute before:left-0"
+                  >
+                    {item}
+                  </li>
+                ))}
+              </ul>
+              <div className="flex flex-wrap gap-2 mt-4">
                 {exp.technologies.map((tech) => (
                   <span
                     key={tech}
