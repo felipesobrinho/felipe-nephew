@@ -81,7 +81,7 @@ const HeroSection = () => {
         >
           {content.hero.stats.map((stat) => (
             <div key={stat.label}>
-              <dt className="text-2xl font-bold text-foreground leading-tight">{stat.value}</dt>
+              <dt className="text-2xl font-bold text-foreground leading-tight text-balance">{stat.value}</dt>
               <dd className="text-sm text-muted-foreground mt-1 leading-snug">{stat.label}</dd>
             </div>
           ))}

@@ -362,6 +362,7 @@ const content: SiteContent = {
         result: "~30 h/mês economizadas — cada automação poupa de 30 min a 1 h, e quase todas rodam diariamente.",
         links: {
           github: `${GITHUB}/laboratorios-iec`,
+          video: `${GITHUB}/laboratorios-iec/blob/main/docs/media/laboratorios-demo.mp4`,
         },
         media: {
           src: "/ia/automacoes.svg",
@@ -375,7 +376,7 @@ const content: SiteContent = {
         problem:
           "A TI da IEC precisava de um único lugar para registrar os ativos, a quem cada um está alocado e o histórico de cada movimentação.",
         approach:
-          "Sistema full stack desenvolvido com o harness AI-first: Next.js 16 (App Router), Prisma e PostgreSQL/Supabase, NextAuth (credentials + bcrypt), TanStack Table, auditoria central em toda alteração, migrations versionadas e testes com Jest e Playwright.",
+          "Sistema full stack construído AI-first, com agentes de código e revisão humana: Next.js 16 (App Router), Prisma e PostgreSQL/Supabase, NextAuth (credentials + bcrypt), TanStack Table, auditoria central (registrarAuditoria) em toda alteração, migrations versionadas e testes com Jest e Playwright.",
         stack: ["Next.js 16", "TypeScript", "Prisma", "PostgreSQL/Supabase", "NextAuth", "Jest", "Playwright"],
         result: "Em produção: ~10 usuários da TI, 361 ativos e 152 colaboradores inventariados com suas alocações.",
         links: {
@@ -397,7 +398,7 @@ const content: SiteContent = {
           "Máquina de estados de reservas, 3 perfis de acesso (RBAC), integrações com a API de chamados, webhooks do Microsoft Teams e Google Calendar disparadas só em reservas presenciais, auditoria e relatórios em Recharts alimentados por ELT (SharePoint e múltiplos Google Calendars).",
         stack: ["Next.js", "TypeScript", "Prisma", "PostgreSQL/Supabase", "Recharts", "Teams webhooks", "Google Calendar"],
         result:
-          "Em produção na IEC: chamado, aviso no Teams e evento na agenda saem automaticamente a cada reserva presencial aprovada.",
+          "Em produção na IEC: a cada reserva presencial, chamado e aviso no Teams saem automaticamente; na confirmação, o evento vai para a agenda do laboratório. Cada passo fica no histórico da reserva.",
         links: {
           github: `${GITHUB}/laboratorios-iec`,
           video: `${GITHUB}/laboratorios-iec/blob/main/docs/media/laboratorios-demo.mp4`,
@@ -531,7 +532,7 @@ const content: SiteContent = {
         summary:
           "Contrato PJ: conduzo a transformação digital de uma ONG que assessora outras organizações sociais, do mapeamento dos processos à entrega.",
         highlights: [
-          "Aplicação de gestão financeira web (Next.js) e desktop (Electron), com Prisma, pnpm e testes em Vitest — em desenvolvimento, para substituir planilhas e uma base em Access.",
+          "Aplicação de gestão financeira web (Next.js) e desktop (Electron), com Prisma, pnpm e testes em Vitest — em desenvolvimento.",
           "Digitalização do processo das ONGs assessoradas, pensada para ser replicada em cada instituição.",
           "CMS replicável com Payload CMS e Next.js, para que equipes sem conhecimento técnico mantenham o próprio site.",
         ],
@@ -559,8 +560,8 @@ const content: SiteContent = {
           "Desenvolvimento do Cartosoft, sistema usado por mais de 1.000 cartórios, no back-end com Java e Spring Boot e no front-end com Vue.js.",
         highlights: [
           "Desenvolvi funcionalidades de front-end em Vue.js e rotas de back-end em Spring Boot.",
-          "Escrevi e executei migrações em bancos PostgreSQL e MySQL de produção, inclusive diretamente no ambiente do cliente.",
-          "Traduzi problemas relatados pelos usuários em requisitos e correções.",
+          "Escrevi queries de migração e de atualizações evolutivas do sistema em PostgreSQL e MySQL.",
+          "Executei manutenções em bancos de dados de produção, diretamente no ambiente do cliente.",
         ],
         technologies: ["Java", "Spring Boot", "Vue.js", "PostgreSQL", "MySQL"],
       },
