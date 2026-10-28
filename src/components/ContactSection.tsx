@@ -21,7 +21,7 @@ const ContactSection = () => {
       className="py-24 px-6"
     >
       <div className="max-w-2xl mx-auto text-center">
-        <p className="font-mono text-primary text-sm mb-4">06. E agora?</p>
+        <p className="font-mono text-primary text-sm mb-4">07. E agora?</p>
         <h2 className="text-3xl sm:text-4xl font-bold text-foreground mb-6">
           {content.contact.heading}
         </h2>

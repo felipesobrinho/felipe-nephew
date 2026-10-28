@@ -23,18 +23,18 @@ const Navbar = () => {
         scrolled || open ? "bg-background/80 backdrop-blur-md border-b border-border" : ""
       }`}
     >
-      <div className="max-w-4xl mx-auto px-6 py-4 flex items-center justify-between">
-        <a href="#" className="font-mono text-sm text-primary font-medium">
+      <div className="max-w-5xl mx-auto px-6 py-4 flex items-center justify-between gap-6">
+        <a href="#" className="font-mono text-sm text-primary font-medium shrink-0">
           {content.name.split(" ")[0].toLowerCase()}
           <span className="text-muted-foreground">.dev</span>
         </a>
 
-        <ul className="hidden md:flex items-center gap-8">
+        <ul className="hidden lg:flex items-center gap-6">
           {content.nav.map((item, i) => (
             <li key={item.href}>
               <a
                 href={item.href}
-                className="text-sm text-muted-foreground hover:text-foreground transition-colors duration-200"
+                className="whitespace-nowrap text-sm text-muted-foreground hover:text-foreground transition-colors duration-200"
               >
                 <span className="font-mono text-primary text-xs mr-1">0{i + 1}.</span>
                 {item.label}
@@ -49,7 +49,7 @@ const Navbar = () => {
           aria-expanded={open}
           aria-controls="menu-mobile"
           aria-label={open ? "Fechar menu" : "Abrir menu"}
-          className="md:hidden text-muted-foreground hover:text-foreground transition-colors"
+          className="lg:hidden text-muted-foreground hover:text-foreground transition-colors"
         >
           {open ? <X size={22} /> : <Menu size={22} />}
         </button>
@@ -63,7 +63,7 @@ const Navbar = () => {
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.2 }}
-            className="md:hidden overflow-hidden px-6 pb-4 space-y-1"
+            className="lg:hidden overflow-hidden px-6 pb-4 space-y-1"
           >
             {content.nav.map((item, i) => (
               <li key={item.href}>

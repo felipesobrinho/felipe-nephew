@@ -14,7 +14,7 @@ const EducationSection = () => {
       className="py-24 px-6"
     >
       <div className="max-w-4xl mx-auto">
-        <SectionHeading number="05" title={content.education.heading} />
+        <SectionHeading number="06" title={content.education.heading} />
 
         <div className="space-y-12">
           {content.education.items.map((edu, i) => (
@@ -27,7 +27,9 @@ const EducationSection = () => {
               className="group relative pl-8 border-l border-border hover:border-primary transition-colors duration-300"
             >
               <div className="absolute left-0 top-1 w-2 h-2 -translate-x-[5px] rounded-full bg-border group-hover:bg-primary transition-colors duration-300" />
-              <p className="font-mono text-xs text-muted-foreground mb-1">{edu.period}</p>
+              <p className="font-mono text-xs text-muted-foreground mb-1">
+                {edu.period} · <span className="text-primary">{edu.status}</span>
+              </p>
               <h3 className="text-lg font-medium text-foreground">
                 {edu.degree}{" "}
                 {edu.institutionUrl ? (
