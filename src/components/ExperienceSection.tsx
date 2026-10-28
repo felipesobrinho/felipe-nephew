@@ -14,7 +14,7 @@ const ExperienceSection = () => {
       className="py-24 px-6"
     >
       <div className="max-w-4xl mx-auto">
-        <SectionHeading number="03" title={content.experience.heading} />
+        <SectionHeading number="04" title={content.experience.heading} />
 
         <div className="space-y-14">
           {content.experience.items.map((exp, i) => (

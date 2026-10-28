@@ -59,10 +59,10 @@ const HeroSection = () => {
           className="flex flex-wrap gap-4 mb-14"
         >
           <a
-            href="#projetos"
+            href="#ia"
             className="inline-block font-mono text-sm bg-primary text-primary-foreground px-6 py-3 rounded hover:bg-primary/90 transition-colors duration-200"
           >
-            Ver projetos
+            Ver IA aplicada
           </a>
           <a
             href="#contato"
@@ -77,11 +77,11 @@ const HeroSection = () => {
           variants={fadeUp}
           initial="hidden"
           animate="visible"
-          className="grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-2xl border-t border-border pt-8"
+          className="grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-3xl border-t border-border pt-8"
         >
           {content.hero.stats.map((stat) => (
             <div key={stat.label}>
-              <dt className="text-3xl font-bold text-foreground">{stat.value}</dt>
+              <dt className="text-2xl font-bold text-foreground leading-tight text-balance">{stat.value}</dt>
               <dd className="text-sm text-muted-foreground mt-1 leading-snug">{stat.label}</dd>
             </div>
           ))}

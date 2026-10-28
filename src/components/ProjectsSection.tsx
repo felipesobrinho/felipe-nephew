@@ -123,7 +123,7 @@ const ProjectsSection = () => {
       className="py-24 px-6"
     >
       <div className="max-w-4xl mx-auto">
-        <SectionHeading number="04" title={content.projects.heading} className="mb-6" />
+        <SectionHeading number="05" title={content.projects.heading} className="mb-6" />
         <p className="text-muted-foreground leading-relaxed max-w-2xl mb-12">
           {content.projects.intro}
         </p>
